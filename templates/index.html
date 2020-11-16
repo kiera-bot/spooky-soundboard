@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Soundboard OoOoOoO</title>
+    <meta name="description" content="Halloween Sound Effects/ Soundboard">
+  <!--   Image assets from:
+      https://www.etsy.com/shop/ClipartsStudioArt
+      https://www.etsy.com/shop/DigiKika
+      Sfx are public domain. -->
+    <link href="https://fonts.googleapis.com/css2?family=Creepster&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script>
+      function playAudio(url) {
+      new Audio(url).play();
+      }
+    </script>
+  </head>
+
+  <body>
+    <div id='main-container'>
+      <div id="bg">
+      <div id='title'><h1>Spooky Soundboard</h1></div>
+      <div id='main-content'>
+        <div class='info-row'>
+
+          {% for name, sfx in soundList.items() %}
+            <div class = "sound-div">
+              <image class="sfx" src="{{ url_for('static', filename='images/%s.png' % sfx) }}" value="PLAY" onclick="playAudio('{{ url_for('static', filename='audio/%s.mp3' % sfx) }}')">
+              </image>
+              <p>{{name}}</p>
+            </div>
+          {% endfor %}
+
+        </div>
+      </div>
+      <div></div>
+      </div>
+    </div>
+    <footer class="page-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col l6 s12">
+            <h5 class="white-text">OoOoOoOoO Spooky</h5>
+            <p class="foot-text" >Made by Kiera :)</p>
+       <!--      <a class="foot-text" href="#!">© 2020 Copyright Text</a> -->
+          </div>
+          <div class="col l4 offset-l2 s12">
+            <h5 class="white-text">Links</h5>
+            <ul>
+              <li><a class="foot-text" href="https://github.com/kiera-bot">Github</a></li>
+      <!--         <li><a class="foot-text" href="#!">Link 2</a></li>
+              <li><a  class="foot-text" href="#!">Link 3</a></li> -->
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer-copyright">
+        <div class="container">
+          <!-- <a class="foot-text right" href="#!">More Links</a> -->
+      </div>
+    </div>
+   </footer> 
+  </body>
+</html>

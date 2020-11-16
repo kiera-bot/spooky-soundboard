@@ -1,0 +1,144 @@
+html {
+  height: 100%;
+}
+
+
+body{
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background-color: #05003a;
+}
+
+
+h1, h5{
+  background: -webkit-linear-gradient(#E7652B, #63C968);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: 'Creepster', cursive;
+}
+
+
+#title{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  font-size: 2em;
+  color: #2ECD5A;
+}
+
+
+#main-container{  
+  display: flex;
+  flex-direction: column;
+  flex: 1 0 auto;
+}
+
+
+#bg{
+  display: flex;
+  flex-direction: column;
+  flex: 1 0 auto;
+  background: url('../images/spookybg.png') no-repeat;
+  background-color: #000033;
+  background-position: bottom;
+  background-repeat: repeat-x;
+  background-size: cover;
+}
+
+
+#main-content{
+  display: flex;
+  flex-direction: column;
+  margin:20px;               
+}
+
+
+.info-row{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-bottom: 30px;
+}
+
+
+.sound-div{
+  display: flex;
+  flex-direction: column;
+  width: 15%;
+  margin-bottom: 15px;
+}
+
+
+.sound-div p{
+  font-family: 'Creepster', cursive;
+  font-size: 1.5em;
+  color: #2ECD5A;
+  text-align: center;
+}
+
+
+.sfx{
+  width:100%;
+  height: auto;
+}
+
+
+.sfx:hover{
+  animation: shake 0.5s; 
+  animation-iteration-count: infinite; 
+}
+
+          
+@keyframes shake {
+  0% { transform: translate(1px, 1px) rotate(0deg); }
+  10% { transform: translate(-1px, -2px) rotate(-1deg); }
+  20% { transform: translate(-3px, 0px) rotate(1deg); }
+  30% { transform: translate(3px, 2px) rotate(0deg); }
+  40% { transform: translate(1px, -1px) rotate(1deg); }
+  50% { transform: translate(-1px, 2px) rotate(-1deg); }
+  60% { transform: translate(-3px, 1px) rotate(0deg); }
+  70% { transform: translate(3px, 1px) rotate(-1deg); }
+  80% { transform: translate(-1px, -1px) rotate(1deg); }
+  90% { transform: translate(1px, 2px) rotate(0deg); }
+  100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+
+
+@media(max-width: 768px){
+  /* For mobile phones: */
+  #main-content{
+    width:70%;
+    margin-left:auto;
+    margin-right: auto;
+  }
+}
+
+
+@media(min-width:768px){
+  .material-icons{
+    padding-left:5px;
+  }
+  #main-content{
+    width:70%;
+    margin-left:auto;
+    margin-right: auto;
+  }
+}
+
+
+.page-footer{
+  padding-top: 0px;
+  background-color: #010132;
+}
+
+
+.row{
+  margin-bottom: 0px;
+}
+
+
+.foot-text{
+  color: #BC874C;
+}
